@@ -1,0 +1,72 @@
+html, body {
+background:#EEEEEE none repeat scroll 0 0;
+font-family:verdana;
+font-size:12px;
+margin:0;
+padding:0;
+}
+.headfoot {
+background:#0088AA none repeat scroll 0 0;
+color:#FFFFFF;
+display:block;
+font-size:30px;
+height:70px;
+padding:5px;
+text-align:center;
+}
+#container {
+background:#00AACC none repeat scroll 0 0;
+border-left:200px solid #AAAA88;
+border-right:200px solid #AA88AA;
+display:block;
+overflow:visible;
+position:relative;
+}
+#left {
+display:inline;
+float:left;
+margin-left:-197px;
+position:relative;
+width:198px;
+}
+#right {
+display:inline;
+float:right;
+margin-right:-197px;
+position:relative;
+width:198px;
+}
+.clear {
+clear:both;
+height:1px;
+overflow:hidden;
+}
+a:visited {
+color:#000000;
+}
+#container a:visited, a {
+color:#000000;
+text-decoration:none;
+}
+#container a span {
+display:none;
+}
+#container a:active, #container a:focus {
+background:transparent none repeat scroll 0 0;
+color:#FFFFFF;
+cursor:default;
+text-decoration:none;
+}
+#container a:active span, #container a:focus span {
+display:inline;
+left:0;
+}
+.comment {
+text-align:center;
+}
+.comment a {
+text-decoration:underline;
+}
+em {
+font-weight:bold;
+}

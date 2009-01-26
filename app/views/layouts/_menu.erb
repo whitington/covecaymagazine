@@ -1,0 +1,13 @@
+<h1>Menu</h1>
+
+<%= session[:user_id] && session[:user_name]? "<h3>Hi " + session[:user_name] + "</h3>":"" %>
+<%= session[:user_id]?(link_to 'Logout', {:controller => 'admin', :action => 'logout'}):"" %>
+<%= session[:user_id]?"":(link_to 'Login', {:controller => 'admin', :action => 'login'}) %><br>
+<br>
+<%= link_to 'Home', index_url %><br>
+<%= link_to 'Users', users_path %><br />
+<%= link_to 'Articles', articles_path %><br />
+<%= link_to 'Categories', categories_path %><br />
+<%= link_to 'CoveCaySales', covecaysales_path %><br />
+
+

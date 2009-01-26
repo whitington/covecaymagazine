@@ -1,0 +1,67 @@
+<h1>New covecaysales</h1>
+
+<% form_for(@covecaysale) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :parcel_number %><br />
+    <%= f.text_field :parcel_number %>
+  </p>
+  <p>
+    <%= f.label :property_address %><br />
+    <%= f.text_field :property_address %>
+  </p>
+  <p>
+    <%= f.label :condo_name %><br />
+    <%= f.text_field :condo_name %>
+  </p>
+  <p>
+    <%= f.label :sale_date %><br />
+    <%= f.text_field :sale_date %>
+  </p>
+  <p>
+    <%= f.label :sale_price %><br />
+    <%= f.text_field :sale_price %>
+  </p>
+  <p>
+    <%= f.label :year_built %><br />
+    <%= f.text_field :year_built %>
+  </p>
+  <p>
+    <%= f.label :sq_ft %><br />
+    <%= f.text_field :sq_ft %>
+  </p>
+  <p>
+    <%= f.label :land_use_id %><br />
+    <%= f.text_field :land_use_id %>
+  </p>
+  <p>
+    <%= f.label :subdivision_id %><br />
+    <%= f.text_field :subdivision_id %>
+  </p>
+  <p>
+    <%= f.label :cc_village %><br />
+    <%= f.text_field :cc_village %>
+  </p>
+  <p>
+    <%= f.label :cc_building %><br />
+    <%= f.text_field :cc_building %>
+  </p>
+  <p>
+    <%= f.label :cc_unit %><br />
+    <%= f.text_field :cc_unit %>
+  </p>
+  <p>
+    <%= f.label :sale_month %><br />
+    <%= f.text_field :sale_month %>
+  </p>
+  <p>
+    <%= f.label :sale_year %><br />
+    <%= f.text_field :sale_year %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', covecaysales_path %>

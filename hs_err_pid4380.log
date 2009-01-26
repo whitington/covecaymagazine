@@ -1,0 +1,173 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6d833092, pid=4380, tid=5016
+#
+# Java VM: Java HotSpot(TM) Client VM (11.0-b16 mixed mode windows-x86)
+# Problematic frame:
+# V  [jvm.dll+0x33092]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x024b0c00):  JavaThread "CompilerThread0" daemon [_thread_in_native, id=5016, stack(0x00a10000,0x00a60000)]
+
+siginfo: ExceptionCode=0xc0000005, writing address 0x26fb8548
+
+Registers:
+EAX=0x26fb8548, EBX=0x00a5fab0, ECX=0x00000000, EDX=0x00000001
+ESP=0x00a5fa20, EBP=0xffffffff, ESI=0x00a5fabc, EDI=0x05ad39c0
+EIP=0x6d833092, EFLAGS=0x00010246
+
+Top of Stack: (sp=0x00a5fa20)
+0x00a5fa20:   00a5fa70 06fb4d48 00a5fa8c 00000000
+0x00a5fa30:   05ad31b8 0000001c 00a5fa70 05791708
+0x00a5fa40:   00a5fa8c 06fb8568 00000315 00000107
+0x00a5fa50:   6d833257 05ad770c 05ad2998 0264c248
+0x00a5fa60:   00000000 6d8332a6 06fb4d48 00a5fc14
+0x00a5fa70:   00000107 0000003f 00000003 06fb7d00
+0x00a5fa80:   00000000 06fb7fd0 00000107 06fb7ff8
+0x00a5fa90:   00000107 06fb8020 00000107 00000107 
+
+Instructions: (pc=0x6d833092)
+0x6d833082:   c1 ea 05 8d 04 90 83 e1 1f ba 01 00 00 00 d3 e2
+0x6d833092:   09 10 8b 16 8b 4e 04 4a 8b c2 89 16 8b 04 81 3b 
+
+
+Stack: [0x00a10000,0x00a60000],  sp=0x00a5fa20,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x33092]
+
+
+Current CompileTask:
+C1:3093  !   ruby.jit.ruby.C_3a_.Program_20_Files.NetBeans_20_6_dot_5.ruby2.jruby_minus_1_dot_1_dot_4.lib.ruby.$1_dot_8.webrick.httpserver.run23141412_17067564.rescue_1$RUBY$__rescue__(Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/Block;)Lorg/jruby/runtime/builtin/IRubyObject; (361 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x05b0cc00 JavaThread "Thread-16057" daemon [_thread_new, id=160, stack(0x00000000,0x00000000)]
+  0x05af6c00 JavaThread "Thread-16058" daemon [_thread_new, id=5212, stack(0x00000000,0x00000000)]
+  0x05a7cc00 JavaThread "Thread-16055" daemon [_thread_in_vm, id=3044, stack(0x05b20000,0x05c20000)]
+  0x05b0c800 JavaThread "Thread-15941" daemon [_thread_in_native, id=5000, stack(0x05e20000,0x05f20000)]
+  0x06dbe400 JavaThread "Thread-15935" daemon [_thread_in_native, id=3356, stack(0x05c20000,0x05d20000)]
+  0x06dbd000 JavaThread "Thread-15932" daemon [_thread_in_native, id=4896, stack(0x055b0000,0x056b0000)]
+  0x06dbdc00 JavaThread "Thread-15903" daemon [_thread_in_native, id=4828, stack(0x053b0000,0x054b0000)]
+  0x024b5000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=4384, stack(0x04b30000,0x04c30000)]
+=>0x024b0c00 JavaThread "CompilerThread0" daemon [_thread_in_native, id=5016, stack(0x00a10000,0x00a60000)]
+  0x024adc00 JavaThread "Attach Listener" daemon [_thread_blocked, id=5460, stack(0x04a30000,0x04b30000)]
+  0x024a3000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5636, stack(0x04930000,0x04a30000)]
+  0x0248e800 JavaThread "Finalizer" daemon [_thread_blocked, id=4344, stack(0x04830000,0x04930000)]
+  0x0248d400 JavaThread "Reference Handler" daemon [_thread_blocked, id=5124, stack(0x04730000,0x04830000)]
+  0x025f9400 JavaThread "main" [_thread_in_native, id=2236, stack(0x01c70000,0x01d70000)]
+
+Other Threads:
+  0x02488800 VMThread [stack: 0x009c0000,0x00a10000] [id=3396]
+  0x024be000 WatcherThread [stack: 0x01d70000,0x01dc0000] [id=4716]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 3904K, used 2371K [0x10010000, 0x10440000, 0x12770000)
+  eden space 3520K,  59% used [0x10010000, 0x10217d10, 0x10380000)
+  from space 384K,  76% used [0x103e0000, 0x10429108, 0x10440000)
+  to   space 384K,   0% used [0x10380000, 0x10380000, 0x103e0000)
+ tenured generation   total 50896K, used 50653K [0x12770000, 0x15924000, 0x30010000)
+   the space 50896K,  99% used [0x12770000, 0x158e7400, 0x158e7400, 0x15924000)
+ compacting perm gen  total 20224K, used 20070K [0x30010000, 0x313d0000, 0x34010000)
+   the space 20224K,  99% used [0x30010000, 0x313a9918, 0x313a9a00, 0x313d0000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	C:\Program Files\Java\jre6\bin\java.exe
+0x77b90000 - 0x77cb7000 	C:\Windows\system32\ntdll.dll
+0x76520000 - 0x765fb000 	C:\Windows\system32\kernel32.dll
+0x76ed0000 - 0x76f96000 	C:\Windows\system32\ADVAPI32.dll
+0x76b90000 - 0x76c52000 	C:\Windows\system32\RPCRT4.dll
+0x752e0000 - 0x752fe000 	C:\Windows\system32\ShimEng.dll
+0x76240000 - 0x7626c000 	C:\Windows\system32\apphelp.dll
+0x6df40000 - 0x6dfc8000 	C:\Windows\AppPatch\AcLayers.DLL
+0x76650000 - 0x766ed000 	C:\Windows\system32\USER32.dll
+0x76df0000 - 0x76e3b000 	C:\Windows\system32\GDI32.dll
+0x76fd0000 - 0x77ae0000 	C:\Windows\system32\SHELL32.dll
+0x766f0000 - 0x7679a000 	C:\Windows\system32\msvcrt.dll
+0x76430000 - 0x76488000 	C:\Windows\system32\SHLWAPI.dll
+0x76a20000 - 0x76b64000 	C:\Windows\system32\ole32.dll
+0x76870000 - 0x768fd000 	C:\Windows\system32\OLEAUT32.dll
+0x762c0000 - 0x762de000 	C:\Windows\system32\USERENV.dll
+0x762a0000 - 0x762b4000 	C:\Windows\system32\Secur32.dll
+0x729d0000 - 0x72a12000 	C:\Windows\system32\WINSPOOL.DRV
+0x75e30000 - 0x75e44000 	C:\Windows\system32\MPR.dll
+0x76b70000 - 0x76b8e000 	C:\Windows\system32\IMM32.DLL
+0x767a0000 - 0x76868000 	C:\Windows\system32\MSCTF.dll
+0x76420000 - 0x76429000 	C:\Windows\system32\LPK.DLL
+0x76e40000 - 0x76ebd000 	C:\Windows\system32\USP10.dll
+0x10000000 - 0x10005000 	C:\Windows\system32\avgrsstx.dll
+0x750d0000 - 0x7526e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.6001.18000_none_5cdbaa5a083979cc\comctl32.dll
+0x7c340000 - 0x7c396000 	C:\Program Files\Java\jre6\bin\msvcr71.dll
+0x6d800000 - 0x6da56000 	C:\Program Files\Java\jre6\bin\client\jvm.dll
+0x749b0000 - 0x749e2000 	C:\Windows\system32\WINMM.dll
+0x74970000 - 0x749a9000 	C:\Windows\system32\OLEACC.dll
+0x6d280000 - 0x6d288000 	C:\Program Files\Java\jre6\bin\hpi.dll
+0x76400000 - 0x76407000 	C:\Windows\system32\PSAPI.DLL
+0x6d7b0000 - 0x6d7bc000 	C:\Program Files\Java\jre6\bin\verify.dll
+0x6d320000 - 0x6d33f000 	C:\Program Files\Java\jre6\bin\java.dll
+0x6d7f0000 - 0x6d7ff000 	C:\Program Files\Java\jre6\bin\zip.dll
+0x6d560000 - 0x6d569000 	C:\Program Files\Java\jre6\bin\management.dll
+0x75750000 - 0x7578b000 	C:\Windows\system32\rsaenh.dll
+0x6d610000 - 0x6d623000 	C:\Program Files\Java\jre6\bin\net.dll
+0x76fa0000 - 0x76fcd000 	C:\Windows\system32\WS2_32.dll
+0x76ec0000 - 0x76ec6000 	C:\Windows\system32\NSI.dll
+0x759d0000 - 0x75a0b000 	C:\Windows\system32\mswsock.dll
+0x75a30000 - 0x75a35000 	C:\Windows\System32\wship6.dll
+0x74d30000 - 0x74d3f000 	C:\Windows\system32\NLAapi.dll
+0x75c90000 - 0x75ca9000 	C:\Windows\system32\IPHLPAPI.DLL
+0x75c50000 - 0x75c85000 	C:\Windows\system32\dhcpcsvc.DLL
+0x75f50000 - 0x75f7c000 	C:\Windows\system32\DNSAPI.dll
+0x75c40000 - 0x75c47000 	C:\Windows\system32\WINNSI.DLL
+0x75c10000 - 0x75c31000 	C:\Windows\system32\dhcpcsvc6.DLL
+0x72870000 - 0x7287f000 	C:\Windows\system32\napinsp.dll
+0x72800000 - 0x72812000 	C:\Windows\system32\pnrpnsp.dll
+0x018b0000 - 0x018d5000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x72860000 - 0x72868000 	C:\Windows\System32\winrnr.dll
+0x76900000 - 0x7694a000 	C:\Windows\system32\WLDAP32.dll
+0x755a0000 - 0x755a5000 	C:\Windows\System32\wshtcpip.dll
+0x728f0000 - 0x728f6000 	C:\Windows\system32\rasadhlp.dll
+0x00b80000 - 0x00b99000 	C:\Users\Ron\AppData\Local\Temp\jna2512458509649693724.tmp
+0x6d630000 - 0x6d639000 	C:\Program Files\Java\jre6\bin\nio.dll
+
+VM Arguments:
+jvm_args: -Xverify:none -da -Xmx512m -Xss1024k -Djruby.base=C:\Program Files\NetBeans 6.5\ruby2\jruby-1.1.4 -Djruby.home=C:\Program Files\NetBeans 6.5\ruby2\jruby-1.1.4 -Djruby.lib=C:\Program Files\NetBeans 6.5\ruby2\jruby-1.1.4\lib -Djruby.shell=cmd.exe -Djruby.script=jruby.bat 
+java_command: org.jruby.Main script\server webrick --port 3000
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jre6
+CLASSPATH=.;C:\Program Files\QuickTime\QTSystem\QTJava.zip
+PATH=C:\Program Files\NetBeans 6.5\ruby2\jruby-1.1.4\bin;C:\Ruby\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\QuickTime\QTSystem\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\MySQL\MySQL Server 5.0\bin;c:\ruby\bin
+USERNAME=Ron
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 13, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows Vista Build 6001 Service Pack 1
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 15 stepping 13, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3
+
+Memory: 4k page, physical 2097151k(1340732k free), swap 4194303k(4194303k free)
+
+vm_info: Java HotSpot(TM) Client VM (11.0-b16) for windows-x86 JRE (1.6.0_11-b03), built on Nov 10 2008 02:15:12 by "java_re" with MS VC++ 7.1
+
+time: Sat Jan 17 16:49:06 2009
+elapsed time: 9492 seconds
+

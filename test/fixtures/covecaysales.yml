@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  parcel_number: MyString
+  property_address: MyString
+  condo_name: MyString
+  sale_date: MyString
+  sale_price: 1
+  year_built: 1
+  sq_ft: 1
+  land_use_id: 1
+  subdivision_id: 1
+  cc_village: MyString
+  cc_building: MyString
+  cc_unit: MyString
+  sale_month: 1
+  sale_year: 1
+
+two:
+  parcel_number: MyString
+  property_address: MyString
+  condo_name: MyString
+  sale_date: MyString
+  sale_price: 1
+  year_built: 1
+  sq_ft: 1
+  land_use_id: 1
+  subdivision_id: 1
+  cc_village: MyString
+  cc_building: MyString
+  cc_unit: MyString
+  sale_month: 1
+  sale_year: 1

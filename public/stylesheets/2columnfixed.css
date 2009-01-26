@@ -1,0 +1,92 @@
+/* css for jqGrids */
+
+#article_summary{
+    height:50px;
+}
+
+#article_title{}
+
+#t_ccsales {
+    text-align:left;
+    height:35px;
+}
+
+html, body {
+    margin:0px;
+    padding:0px;
+    background:#eee;
+    font-family:verdana;
+    font-size:12px;
+    text-align:center;
+    }
+/* The header and footer */
+.blue {
+    color:blue
+}
+.red{
+    color:red
+}
+.header {
+    display:block;
+    height:70px;
+    background:#08a;
+    color:#fff;
+    text-align:center;
+    padding:5px;
+    font-size:30px;
+    width:960px;
+}
+.footer {
+    display:block;
+    height:70px;
+    background:#08a;
+    color:#fff;
+    text-align:center;
+    padding:5px;
+    font-size:30px;
+    width:960px;
+}
+
+/* This bit does all the work */
+#centeronpage {
+
+    width:970px;
+    margin: 10px auto;
+}
+
+#container {
+    position:relative;
+    text-align:left;
+    display:block;
+    background:#0ac;
+    width:570px;
+    border-left:200px solid #aa8;
+    border-right:200px solid #a8a;
+    overflow:visible;
+}
+#right {
+    float:right;
+    position:relative;
+    width:200px;
+    margin-right:-205px;
+    display:inline;
+}
+#left {
+    float:left;
+    position:relative;
+    width:200px;
+    margin-left:-195px;
+    display:inline;
+}
+
+.clear {clear:both;height:1px;overflow:hidden;}
+a:visited {color:#000;}
+a:hover {text-decoration: underline;}
+/* Just to extend each column */
+#container a:visited, a {color:#000; text-decoration:none;}
+#container a span {display:none;}
+#container a:active, #container a:focus {color:#fff; text-decoration:none; background:transparent; cursor:default;}
+#container a:active span, #container a:focus span {display:inline; left:0;}
+.comment {text-align:center;}
+.comment a {text-decoration:underline;}
+em {font-weight:bold;}

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Covecaysales: <%= controller.action_name %></title>
+
+    <%= stylesheet_link_tag '2columnfixed' %>
+    <%= stylesheet_link_tag 'themes/steel/grid.css' %>
+    <%= stylesheet_link_tag 'themes/jqModal.css' %>
+    <%= javascript_include_tag "jquery.js" %>
+    <%= javascript_include_tag "jquery.jqGrid.js" %>
+    <%= javascript_include_tag "js/jqModal.js" %>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        jQuery("#ccsales").jqGrid({
+          url:'covecaysales/grid_data',
+          type: 'xml',
+          mtype: 'GET',
+          colNames:['Village','Building', 'Unit', 'SqFt', 'Month', 'Year', 'Price'],
+          colModel:[
+            {name:'cc_village',index:'cc_village', width:50},
+            {name:'cc_building',index:'cc_building', width:70},
+            {name:'cc_unit',index:'cc_unit', width:50},
+            {name:'sq_ft',index:'sq_ft', width:50},
+            {name:'sale_month',index:'sale_month', width:50},
+            {name:'sale_year',index:'sale_year', width:50},
+            {name:'sale_price',index:'sale_price', width:150, search:false}
+          ],
+          imgpath: '/stylesheets/themes/basic/images',
+          caption: "Narrow results by typing some or all criteria then click Search.<br>Click on a column header to sort that column.",
+          multiselect: false,
+          hidegrid: false,
+          search: true,
+          rowList: [10, 20, 50, 100],
+          rowNum: 10,
+          viewrecords: true,
+          sortname: 'sale_date',
+          height: 'auto',
+          toolbar: [true, "top"],
+          pager: 'ccsalespager',
+        });
+        jQuery("#t_ccsales").filterGrid("#ccsales", {
+          gridToolbar: true,
+          enableSearch: true,
+          enableClear: true,
+          gridModel: true,
+          gridNames: false
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="centeronpage">
+      <div class="header">Header</div>
+
+      <div id="container">
+        <div id="right">
+          <%= render :partial => 'layouts/menu' %>
+        </div>
+
+        &nbsp;
+        <p style="color: green"><%= flash[:notice] %></p>
+        <%= yield  %>
+        <div class="clear"></div>
+      </div>
+      <div class="footer">
+        Footer
+      </div>
+    </div>
+  </body>
+</html>

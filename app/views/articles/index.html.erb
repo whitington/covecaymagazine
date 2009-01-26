@@ -1,0 +1,23 @@
+<%= link_to 'All', index_url %>
+<% for category in Category.find(:all) %>
+    <%= link_to category.name, {:action => 'index', :category => category.name.downcase.gsub(' ','_')}%>
+<% end %>
+
+<% for article in @articles %>
+  <h3><%=h article.title %></h3><br><br>
+    
+  Published On: <%=h article.publish_date.strftime("%b %d, %Y") %>
+  Category: <%=h article.category.name if article.category_id %>
+  Author: <%=h article.user_id %><br><br>
+  <%=h article.summary %><br><br>
+  <% if session[:admin] %>
+    <%= link_to 'Show', article %>
+    <%= link_to 'Edit', edit_article_path(article) %>
+    <%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
+  <hr>
+<% end %>
+
+<br />
+
+<%= link_to 'New article', new_article_path %>
